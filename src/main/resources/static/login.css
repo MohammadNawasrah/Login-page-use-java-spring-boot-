@@ -1,0 +1,273 @@
+.navbarLogin {
+    width: 100vw;
+    justify-content: center;
+}
+
+.navbarLogin .row {
+    width: 100vw;
+    height: 200px;
+}
+
+.navbarLogin .col {
+    align-items: center;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    height: 100vh;
+}
+
+.upB {
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 0px;
+    color: transparent;
+    transition: color 200ms 400ms, border-radius 200ms 500ms;
+    z-index: 1;
+}
+
+.upB:hover {
+    color: white;
+    border-radius: 30px;
+}
+
+.upB::before {
+    content: attr(rr);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    white-space: pre;
+    top: -4px;
+    left: -5px;
+    width: 125px;
+    height: 30px;
+    background-color: rgb(127, 127, 127);
+    transition: 120ms 3s width;
+    transition: width 120ms 300ms, height 300ms, color 300ms 200ms;
+    z-index: 1;
+}
+
+.upB::after {
+    content: "";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    white-space: pre;
+    top: 0px;
+    left: -1px;
+    width: 0px;
+    height: 0px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.486);
+    box-shadow: 5px 5px 10px black;
+    transition: width 120ms 300ms, height 300ms, box-shadow 120ms;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.upB:hover::after {
+    width: 120px;
+    height: 28px;
+}
+
+.upB:focus::after {
+    box-shadow: 1px 1px 3px black, -1px -1px 3px black;
+}
+
+.upB:hover::before {
+    color: transparent;
+    width: 0px;
+    height: 5px;
+}
+
+.colText {
+    font-size: larger;
+    font-weight: bold;
+    font-size: 30px;
+    min-width: 550px;
+}
+
+.loginForm {
+    background-color: rgba(0, 0, 0, 0.501);
+    max-width: 500px;
+    max-height: 400px;
+    height: 400px;
+    display: flex;
+    flex: 200px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px black;
+    margin-top: 20px;
+}
+
+.textContainer .row {
+    /* background-color: red; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    max-height: 40px;
+}
+
+.textAlert {
+    color: silver;
+    /* fill: transparent; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.buttonForm {
+    background-color: black;
+    border-color: white;
+    height: 40px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    color: white;
+}
+
+.buttonForm:hover {
+    color: white;
+    border-color: greenyellow;
+}
+
+.buttonForm:focus {
+    color: white;
+    outline: none;
+    box-shadow: none;
+    border-color: white;
+}
+
+.userName,
+.password {
+    text-align: center;
+    caret-color: red;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+}
+
+@media screen and (width>=807px) and (width<=1008px) {
+    .colText {
+        font-size: 25px;
+        min-width: 500px;
+    }
+    .jordanLogo {
+        width: 80px;
+    }
+    .mutahLogo {
+        width: 80px;
+    }
+}
+
+@media screen and (width>=717px) and (width<=806px) {
+    .colText {
+        min-width: 400px;
+        font-size: 20px;
+    }
+    .jordanLogo {
+        width: 70px;
+    }
+    .mutahLogo {
+        width: 70px;
+    }
+}
+
+@media screen and (width>=617px) and (width<=716px) {
+    .colText {
+        min-width: 400px;
+        font-size: 20px;
+    }
+    .jordanLogo {
+        width: 60px;
+    }
+    .mutahLogo {
+        width: 60px;
+    }
+}
+
+@media screen and (width>=539px) and (width<=616px) {
+    .colText {
+        min-width: 200px;
+        font-size: 20px;
+    }
+    .jordanLogo {
+        width: 60px;
+    }
+    .mutahLogo {
+        width: 60px;
+    }
+}
+
+@media screen and (width>=417px) and (width<=539px) {
+    .navbarLogin .row {
+        height: 100px;
+    }
+    .colText {
+        min-width: 200px;
+        font-size: 15px;
+    }
+    .jordanLogo {
+        width: 60px;
+    }
+    .mutahLogo {
+        width: 60px;
+    }
+    .loginForm {
+        max-width: 300px;
+    }
+}
+
+@media screen and (width>=347px) and (width<=416px) {
+    .colText {
+        min-width: 230px;
+        font-size: 13px;
+    }
+    .jordanLogo {
+        width: 40px;
+    }
+    .mutahLogo {
+        width: 40px;
+    }
+    .loginForm {
+        max-width: 300px;
+    }
+    .navbarLogin .row {
+        height: 100px;
+    }
+}
+
+@media screen and (width>=0px) and (width<=346px) {
+    .colText {
+        min-width: 50px;
+        font-size: 5px;
+    }
+    .jordanLogo {
+        width: 30px;
+    }
+    .mutahLogo {
+        width: 30px;
+    }
+    .navbarLogin .row {
+        height: 120px;
+    }
+    .loginForm {
+        max-width: 150px;
+    }
+}

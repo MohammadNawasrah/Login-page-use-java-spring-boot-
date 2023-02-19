@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
@@ -29,7 +30,7 @@
 
 <div class="container  loginForm ">
 
-    <form class="form-signin" name="loginForm" method="post" th:action="@{/login}">
+    <form class="form-signin" method="post" th:name="RegisterForm" th:action="@{/createA}">
         <div class="text-center mb-5">
             <h1 class="h3 mb-3 font-weight-normal textAlert">Login</h1>
         </div>
@@ -41,9 +42,9 @@
         <div class="form-label-group mt-3">
             <input type="password" id="inputPassword" name="password" class="form-control password" placeholder="Password" required>
         </div>
-        <button class="upB mt-4" rr="login" type="submit">login</button>
-        <br><br>
-        <a th:href="@{/createA}" class="btn btn-dark" rr="create account" >create account</a>
+
+        <button class="btn btn-dark mt-3" type="submit" >create account</button>
+        <span th:text="${error}" class="mt-2 bg-danger"></span>
 
     </form>
 </div>
